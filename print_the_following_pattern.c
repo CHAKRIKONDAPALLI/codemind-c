@@ -3,9 +3,9 @@ int main()
 {
     int i,j,n;
     scanf("%d",&n);
-    for(i=65;i<=64+n;i++)
+    for(i=n+64;i>64;i--)
     {
-        for(j=65;j<=64+n;j++)
+        for(j=64;j<=i-1;j++)
         {
             printf("%c ",i);
         }
