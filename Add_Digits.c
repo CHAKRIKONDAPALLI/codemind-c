@@ -1,24 +1,24 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,c,i,s;
-    scanf("%d",&a);
-    i=a;
-    back:
-    s=0;
-    while(i!=0)
-           {
-                b=i%10;
-                s=s+b;
-                i=i/10;
-           }
-           if(s>=10)
-           {
-               i=s;
-              goto  back;
-           }
-           else
-           {
-               printf("%d",s);
-           }
+    int n,s=0,r;
+    scanf("%d",&n);
+    while(n/10!=0)
+    {
+        s = 0;
+        while(n!=0)
+        {
+            r = n%10;
+            s = s+r;
+            n = n/10;
+        }
+        n = s;
+    }
+    printf("%d",s);
+    
 }
+
+
+
+   
+   
