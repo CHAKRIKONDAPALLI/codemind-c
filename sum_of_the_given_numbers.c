@@ -1,15 +1,14 @@
 #include<stdio.h>
 int main()
 {
-    int n;
+    int n,i;
     scanf("%d",&n);
-    while(n!=0)
+    for(i=1;i<=n;i++)
     {
-        int a,b;
-        scanf("%d%d",&a,&b);
-        int s=a+b;
+        int x,y,sum;
+        scanf("%d%d",&x,&y);
+        sum=x+y;
         printf("%d
-",s);
-        n--;
+",sum);
     }
 }
