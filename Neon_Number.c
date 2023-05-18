@@ -1,10 +1,22 @@
 #include<stdio.h>
 int main()
 {
-    int a;
-    scanf("%d",&a);
-    if(a==9||a==1)
-    printf("Neon Number");
+    int n,m,sn,s=0,r;
+    scanf("%d",&n);
+    sn = n*n;
+    m = sn;
+    while(m!=0)
+    {
+        r = m%10;
+        s = s+r;
+        m = m/10;
+    }
+    if(n==s)
+    {
+        printf("Neon Number");
+    }
     else
-    printf("Not Neon Number");
+    {
+        printf("Not Neon Number");
+    }
 }
