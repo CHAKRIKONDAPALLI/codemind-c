@@ -1,27 +1,26 @@
 #include<stdio.h>
+int p(int i)
+{
+    int r,rev=0;
+    while(i)
+    {
+       r=i%10;
+       rev=(rev*10)+r;
+       i=i/10;
+    }
+    return rev;
+}
 int main()
 {
-    int a,b;
-    scanf("%d%d",&a,&b);
-    for(int i=a;i<=b;i++)
+    int x,y,i;
+    scanf("%d
+%d",&x,&y);
+    for(i=x;i<=y;i++)
     {
-        if(i<=9)
+        if(i==p(i))
         {
             printf("%d ",i);
         }
-        else
-        {
-            int r,s=0,k=i;
-            while(k!=0)
-            {
-                r=k%10;
-                s=s*10+r;
-                k=k/10;
-            }
-            if(s==i)
-            {
-                printf("%d ",i);
-            }
-        }
     }
+    
 }
