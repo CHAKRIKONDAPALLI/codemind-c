@@ -1,10 +1,9 @@
 #include<stdio.h>
 int main()
 {
-    int x,r;
+    int x,r,max=0;
     scanf("%d",&x);
-    int max=0;
-    while(x>0)
+    while(x!=0)
     {
         r=x%10;
         if(r>max)
