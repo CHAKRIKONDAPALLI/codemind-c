@@ -5,10 +5,11 @@ int main()
     scanf("%d",&n);
     for(i=1;i<=n;i++)
     {
-        int x,y,sum;
-        scanf("%d%d",&x,&y);
-        sum=x+y;
+        int a,b,sum;
+        scanf("%d%d",&a,&b);
+        sum=a+b;
         printf("%d
 ",sum);
+        
     }
 }
