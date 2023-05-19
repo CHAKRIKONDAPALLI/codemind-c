@@ -1,19 +1,23 @@
 #include<stdio.h>
 int main()
 {
-    int a,s=0,r,b,c;
-    scanf("%d",&a);
-    b=a;
-    while(b!=0)
-    {
-        r=b%10;
-        s=s*10+r;
-        b=b/10;
-    }
-    if(s==a)
+        int n,r,rev=0,temp;
+        scanf("%d",&n);
+        temp=n;
+        while(temp>0)
+        {
+            r=temp%10;
+            rev=(rev*10)+r;
+            temp=temp/10;
+          }
+    if(n==rev)
     {
         printf("True");
+        
     }
     else
-    printf("False");
+    {
+        printf("False");
+    }
+    
 }
