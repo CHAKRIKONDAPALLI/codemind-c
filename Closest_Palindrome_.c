@@ -1,62 +1,49 @@
 #include<stdio.h>
-     int large(int a)
-     {
-         int b,i,s,r,lar;
-     for(b=a+1;b>0;b++)
-     {
-         i=b;
-         s=0;
-         while(i!=0)
-         {
-             r=i%10;
-             s=s*10+r;
-             i=i/10;
-         }
-         if(s==b)
-         {
-             lar=s;
-            // printf("%d",lar);
-             break;
-         }
-     }
-     return lar;
-     }
-     int small(int a)
-     {
-         int i,s,r,sma,b;
-     for(b=a-1;b>0;b--)
-     {
-         i=b;
-         s=0;
-         while(i!=0)
-         {
-             r=i%10;
-             s=s*10+r;
-             i=i/10;
-         }
-         if(s==b)
-         {
-             sma=s;
-            // printf("
-%d",sma);
-             break;
-         }
-     }
-     return sma;
+int rev(int num)
+{
+    int sum=0,r;
+    while (num>0)
+    {
+        r=num%10;
+        sum=(sum*10)+r;
+        num/=10;
+    }
+    return sum;
 }
 int main()
 {
-    int a,b,c,d,e,f,min;
+    int a;
     scanf("%d",&a);
-   // printf("%d",a);
-    b=small(a);
-    c=large(a);
-    e=c-a;
-    f=a-b;
-    if(e==f)
-    printf("%d %d",b,c);
-    else if(e<f)
-    printf("%d",c);
+    int i,l=0,f=0,dl=0,df=0;
+    for (i=a-1; i>=0; i--)
+    {
+        if (rev(i)==i)
+        {
+            f=i;
+            break;
+        }
+    }
+    for (i=a+1; i<=10000; i++)
+    {
+        if (rev(i)==i)
+        {
+            l=i;
+            break;
+        }
+    }
+    df=a-f;
+    dl=l-a;
+    if (df==dl)
+    {
+        printf("%d %d",f,l);
+    }
+    else if (df>dl)
+    {
+        printf("%d",l);
+    }
     else
-    printf("%d",b);
+    {
+        printf("%d",f);
+    }
+    return 0;
 }
