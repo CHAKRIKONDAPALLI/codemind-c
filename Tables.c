@@ -1,16 +1,16 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,c,i;
-    scanf("%d%d",&a,&b);
-    for(i=1;i<=b;i++)
+    
+    int n,x,i,mul;
+    scanf("%d%d",&n,&x);
+    for(i=1;i<=x;i++)
     {
-        
-        if(i%2==1)
+        if(i%2!=0)
         {
-        c=i*a;
-        printf("%d x %d = %d
-",a,i,c);
+            mul=n*i;
+            printf("%d x %d = %d
+",n,i,mul);
         }
     }
 }
