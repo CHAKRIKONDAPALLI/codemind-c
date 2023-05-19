@@ -1,25 +1,38 @@
 #include<stdio.h>
+int happy(int n)
+{
+    int temp,r,sum=0;
+    temp=n;
+    while(temp)
+    {
+        r=temp%10;
+        sum=sum+(r*r);
+        temp=temp/10;
+    }
+    if(sum>=10)
+    {
+        happy(sum);
+    }
+    else
+    {
+        if(sum==1 || sum==7)
+        {
+            return 1;
+        }
+        return 0;
+    }
+}
 int main()
 {
-    int s=0,a,b,c;
-    scanf("%d",&a);
-    loop:
-    while(a!=0)
-    {
-        b=a%10;
-        s=s+b*b;
-        a=a/10;
-        if(a==0 && s>0 && s<10)
-        {
-            if(s==7 || s==1)
-            printf("True");
-            else
-            printf("False");
-        }
-        else if(a==0 && s>=10)
-        {
-            a=s;
-            s=0;
-        }
-    }
+    int n;
+    scanf("%d",&n);
+   if( happy(n))
+   {
+       printf("True");
+   }
+   else
+   {
+       printf("False");
+   }
+    
 }
